@@ -1,0 +1,61 @@
+﻿.filicons{
+    a{
+        color:$black !important;
+    }
+     ul{
+         list-style:none;
+         margin-left:0px;
+       }
+    li{    
+        margin-bottom:2px;
+        padding:0.3rem 0px 0.3rem 0.5rem;        
+        &:nth-child(even){
+            background-color:$lightgrey;    
+        }
+         &:nth-child(odd){
+            background-color:$snow;    
+        }
+    }
+    h3{
+        margin-bottom:0.5rem;
+    }
+    h1,h2,h3{
+        color:$orange;
+        text-transform:uppercase;
+    }
+}
+.filer{    
+    a{
+        &:before {            
+            @include arrowiconbefore("icondownarrow.png");
+        }
+    }
+}
+.externalinks{
+     a{
+        &:before {
+            @include arrowiconbefore("iconrightarrow.png");
+        }
+    }
+}
+.ljudfiler{
+    a{
+        &:before {
+            @include arrowiconbefore("iconrightarrow.png");
+        }
+    }
+}
+.readlink{
+    a{
+        &:before {
+            @include arrowiconbefore("iconrightarrow.png");
+        }
+    }
+}
+.undersida{
+    a{
+        &:before {
+            @include arrowiconbefore("iconrightarrow.png");
+        }
+    }
+}

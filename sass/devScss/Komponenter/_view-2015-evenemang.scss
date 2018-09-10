@@ -1,0 +1,16 @@
+﻿.view-2015-evenemang{
+    
+    .evenemang_date{
+        margin-top:-4px;
+        margin-bottom:-10px;
+
+    }
+
+    .listcontent{
+         h5{                      
+             &:first-child {            
+                margin-top:0px;
+            }           
+        }
+    }
+}

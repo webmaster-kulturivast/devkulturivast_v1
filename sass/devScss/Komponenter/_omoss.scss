@@ -1,0 +1,257 @@
+﻿
+.omossContentBox{
+    display:none;
+    background-color:$darkergrey;
+    padding:0rem;
+    padding-top:4rem;	
+    margin-bottom:1.5rem;
+    color: $white;
+     h3{
+        color: $white;
+        //border-bottom:2px solid $jumbo;
+        text-transform: uppercase;
+        
+    }
+     h2{
+        color: $white;
+        border-top:1px solid $white;
+        text-transform: uppercase;
+       font-size:2.4rem; 
+       margin-top:2rem;
+       margin-bottom:1.5rem;
+    }
+     .omoss_snabblink{
+         margin-top:1.5rem;
+         padding-top:0rem;
+     }
+     .snabblinks h2{
+		border-top:1px solid #fff;
+  	    margin-top:2.0rem;
+        padding-top:0rem;  
+        padding-bottom:1rem;
+        color:#fff;
+    }
+    .medium-8{        
+        color:$white;
+        a{color:inherit;}
+    }
+}
+
+//tempmeny för testsidan tabort och slåihop med den riktiga ovan
+.omossContentBox2{
+    display:none;
+    background-color:$darkergrey;
+    padding:0rem;
+    padding-top:4rem;	
+    margin-bottom:1.5rem;
+    color: $white;
+    /*@media #{$medium-up} {
+        margin-top:-30px;
+    }*/
+    
+    
+    a{
+        color: $white;
+    }
+    h3{
+        color: $white;
+        //border-bottom:2px solid $jumbo;
+        text-transform: uppercase;
+        font-size:$omoss-h3-font-size;
+    }
+     h2{
+        color: $white;
+        border-top:1px solid $white;
+        text-transform: uppercase;
+       font-size:2.4rem; 
+       margin-top:2rem;
+       margin-bottom:1.5rem;
+    }
+     .omoss_snabblink{
+         margin-top:1.5rem;
+         padding-top:0rem;
+     }
+     .snabblinks h3{
+		border-top:1px solid #fff;
+  	    margin-top:2.0rem;
+        padding-top:1.5rem;  
+        padding-bottom:0.5rem;
+        color:#fff;
+    }
+    .medium-8{        
+        color:$white;
+        a{color:inherit;}
+    }
+}
+//---------------------------------------------------
+
+.omossmenycontainer{
+    padding-left:0px;
+    padding-right:0px;
+    .omossmenyblock{
+        min-height:30px;
+	    background:$ingressbggrey;
+        border-right:1px solid #000;
+        padding-left: 10px;
+        padding-top:2px;
+        @media #{$small-only} {
+           border-right:0px solid #000;
+           border-bottom:1px solid #000;
+           
+	      } 
+         @media #{$medium-up} {
+           border-right:1px solid #000;
+           border-bottom:0px solid #000;
+	      } 
+        &:last-child{	
+            border-right:0px solid #000;
+            border-bottom:0px solid #000;
+            float:left;
+        }    
+    }
+    .omossextraspace{
+        @media #{$small-only} {
+           display:none;
+	    } 
+    }
+}
+
+#omossContent{
+	padding:0px 10% 0px 0px;
+}
+#omossKontaktContent{  
+    display:block;
+	padding-bottom: 2rem;
+    padding-left: 0.7rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    background-color:$mediumgrey;
+    margin-bottom:1rem;
+   
+    //margin:0 4rem 0 3.5rem;
+    ul{
+        list-style:none;
+    }
+    li{
+        list-style:none;
+        border-bottom:2px solid $smoke;
+        margin-bottom:0.5rem;
+        padding-bottom:0.5rem;
+    }
+    h2{        
+        border-bottom:2px solid $smoke;        
+    }
+    & .kontaktkort{
+        //font-size:0.9rem;
+        margin-bottom:1rem;
+        padding-top:0.5rem;
+       & .namn{
+            font-weight:bold;
+             line-height:1.1rem;
+             text-transform: uppercase;
+        }
+        & .avd{            
+            margin-bottom:0.4rem;
+            line-height:1.2rem;
+        }
+       & .ftn{
+            // font-weight:bold;
+             font-size:0.8rem;
+             line-height:1.0rem;
+        }
+       & .epost{
+           // font-weight:bold;
+            line-height:1.0rem;
+            word-break: break-all;
+        }
+    }
+}
+.omossspace{
+    //margin-left:1rem;
+    margin-top:0.52rem;//1rem;
+    //margin-bottom:1.5rem;
+
+    h1{
+        //text-transform: uppercase;
+        color:$orange; 
+        margin-bottom:0px;  
+         @media #{$small-only} {
+             font-size:2.5rem;
+             margin-top:1.8rem;
+         }     
+    }
+    .omossMenu{
+       text-transform: uppercase;
+        height:26px;
+        line-height:1.55rem;
+        padding:0px 1.0rem 0px 0.5rem;  
+        //margin-right:2rem;
+        background-color:$black;
+        
+       font-size:0.85rem;
+       a{color:$white !important;}
+    }
+.lasMerOmOssLink{
+    /*@media #{$small-only} {
+            font-size:0.7em;
+            line-height:12px;
+        }*/
+}
+    
+    //tempmeny för testsidan tabort och slåihop med den riktiga ovan
+    .omossMenu2{ 
+       text-transform: uppercase;
+        height:10px;
+        line-height:1.55rem;
+        padding:0px 1.0rem 0px 0.5rem;  
+        //margin-right:2rem;
+        background-color:$black;
+        margin-top:0.8rem;
+       font-size:0.85rem;
+       a{color:$white !important;}
+       
+         @media #{$small-up} {
+             margin-top:0.55rem;
+
+         }
+          @media #{$medium-up} { 
+       margin-top:0.8rem;
+       }
+    }
+    //-------------------------------------------------------------------
+
+
+    .arrowhead{
+        &:after 
+        {
+            content: "";
+            position: absolute;
+            bottom: -0.8rem;
+            left: 2rem;
+            border-style: solid;
+            border-width: 20px 20px 0;           
+            display: block;
+            width: 0;
+            z-index: 1;            
+            border-color: $black transparent;            
+        }
+    }
+
+    .arrowhead2{
+        &:after 
+        {
+            @media #{$medium-up} {
+                content: "";
+                position: absolute;
+                bottom: -0.8rem;
+                left: 2rem;
+                border-style: solid;
+                border-width: 20px 20px 0;           
+                display: block;
+                width: 0;
+                z-index: 1;            
+                border-color: $ingressbggrey transparent;          
+            }  
+        }
+    }
+}

@@ -1,0 +1,57 @@
+﻿//basestyles
+.top-nav-main{  
+    text-align:center; 
+    line-height:38px;
+   &:hover{       
+       opacity: 0.5;
+   }
+}
+.top-nav-main-text{
+    font-size:x-small;
+    color:$white;
+    font-weight:bold;   
+}
+
+// livestyles
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+.tab-bar-logosection{
+    @media #{$small-up} {
+         margin-left:4em;
+    }
+    @media #{$medium-up} {
+         margin-left:5em;
+    }
+    @media #{$large-up} {
+        margin-left:6em;
+   }
+}
+
+.left-small{
+      @extend .top-nav-main;
+       background-color: $orange;
+    a{
+        span{
+            @extend .top-nav-main-text;                    
+        }
+     }
+
+}
+.right-small{
+    @extend .top-nav-main;
+    background-color:$tuatara;
+    border-left:0px;
+    a{
+        span{
+            @extend .top-nav-main-text;                    
+        }
+        text-align:center;    
+    }      
+}

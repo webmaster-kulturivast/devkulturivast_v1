@@ -1,0 +1,228 @@
+﻿/* version v0.0.2 */
+
+@import 'foundation';
+@import 'devScss/foundation/_settings';
+@import 'devScss/_kivmixin';
+@import 'devScss/Komponenter/_tab-bar';
+@import 'devScss/foundation/_offcanvas';
+@import 'devScss/foundation/_forms';
+@import 'devScss/Komponenter/_mozaikitem';
+@import 'devScss/base/_submenubase';
+@import 'devScss/Komponenter/_mainMenu';
+@import 'devScss/Komponenter/_listview';
+@import 'devScss/Komponenter/_omoss';
+@import 'devScss/Komponenter/_footer';
+@import 'devScss/Komponenter/_breadcrumb';
+@import 'devScss/Komponenter/_kalender';
+@import 'devScss/Komponenter/_artikelmain';
+@import 'devScss/Komponenter/_artikelmenu';
+@import 'devScss/Komponenter/_artikelextra';
+@import 'devScss/Komponenter/_startsida';
+@import 'devScss/Komponenter/_filter_meny_block';
+@import 'devScss/Komponenter/_evenemang';
+@import 'devScss/Komponenter/_imagecrop';
+@import 'devScss/Komponenter/_buttons';
+@import 'devScss/Komponenter/_menybreadcrumb';
+@import 'devScss/Komponenter/_searchTopbox';
+@import 'devScss/Komponenter/_innehallsmeny';
+@import 'devScss/Komponenter/_view-2015-evenemang';
+@import 'devScss/Komponenter/_view-2015-staff';
+@import 'devScss/Komponenter/_kivbuttons';
+@import 'devScss/Komponenter/_loader';
+@import 'devScss/Komponenter/_webtv';
+@import 'devScss/Komponenter/_siteisite';
+@import 'devScss/vendor/_slick';
+@import 'devScss/vendor/_slick-theme';
+@import 'devScss/Komponenter/_loadmore';
+@import 'devScss/Komponenter/_kulturkatalogen';
+@import 'devScss/vendors/_animateSlider';
+
+.h2{
+    color:$black !important;
+    font-weight:$kiv-header-font-weight_thin;
+
+}
+ h1 { line-height: 1.1em!important; }
+
+.row {
+max-width: rem-calc(1000) !important;
+}
+
+.size-21 {
+    font-size: 1.2rem;
+}
+.size-24 {
+    font-size: 1.4rem;
+}
+#contentHeader{
+    h1{
+        text-transform: uppercase;
+        color:$gold; 
+        margin-bottom:0px;       
+    }
+    a{
+        text-transform: uppercase;
+    }
+}
+
+.row {
+  max-width: 1200px;
+}
+
+
+body {
+  height: auto;
+  overflow: scroll;
+}
+
+
+@media #{$small-up} {
+    .small-min-300.column { @include min(300); 
+                                             background-color:#333;
+                     }
+}
+@media #{$medium-up} {
+  .medium-min-300.column { @include min(350); 
+                           background-color:$smoke;
+  }
+  .large-min-300.column { @include min(270); 
+                          background-color:#666;
+  }
+}
+@media #{$large-up} {  
+}
+
+
+.clear {
+  clear: both;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+.scroll-top {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1rem;
+    display: none;
+    text-align:center;
+    border-radius:4px;
+    background-color: $oil;
+    i{
+        font-size:1.7rem;
+        padding:0px;
+        margin:0px;
+        color:$white;
+    }
+    &:hover{
+        background-color: $aluminum;
+        color:$oil;
+    }
+}
+.open{font-size:1.2rem;}
+.move-right .exit-off-canvas {
+    transition: background 300ms ease;
+    background: rgba(000, 000, 000, 0.8);
+    &:hover{
+        background: rgba(000, 000, 000, 0.8);
+    }
+}
+.item img{
+    width:100%;
+}
+
+
+.loader {
+  display: none;
+  position: fixed;
+  left: 20%;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+position: absolute;
+  top:10%;
+  left: 50%;
+  margin-left: -100px; }
+
+
+// drupal style fix
+.block-title{ display:none;}
+.views-field-field-category, .views-label-field-underomr-de{display:none;}
+
+
+#debug h1.thin{
+	font-weight:100 !important;
+}
+#debug h1.extralight{font-weight:200 !important;}
+#debug h1.light{font-weight:300 !important;}
+#debug h1.regular{font-weight:400 !important;}
+#debug h1.simibold{font-weight:600 !important;}
+    
+
+ 
+ .mozaikitems .row {
+   margin: 0 -0.9rem 0 -0.99rem;}
+ 
+ .left-small{
+    height: 65px; 
+    width: 65px;
+    span{
+        font-size:15px !important;
+    }
+    line-height:56px;
+     cursor: pointer; cursor: hand; 
+ }
+
+ .right-small {
+      height: 65px; 
+    width: 65px;
+     span{
+         font-size:15px !important;
+    }
+     line-height:56px;
+      cursor: pointer; cursor: hand; 
+ }
+ .tab-bar {
+   height: 65px;
+   img{
+        width: 160px; 
+   }
+ }
+ .tab-bar-logosection{
+     margin-right: 5em;
+     margin-top: 0.31rem;
+ }
+ 
+ .outeromrade{
+     display:none;
+ }
+
+
+ .datumtemplate{
+     //color: $iron;
+     font-size:0.9rem;
+     font-weight:600;
+}
+ .flex-control-nav {
+    bottom: -60px;
+    
+}
+ /*.section-ljudmagasinet h1{
+color:transparent!important;
+}*/
+
+
+ 

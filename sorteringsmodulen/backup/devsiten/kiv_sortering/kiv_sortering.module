@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * .
+ *
+ *
+ * @author SVEN ÄNGERMARK och ANDREAS JOSEFSSON 2015>
+ */
+
+
+function kiv_sortering_views_query_alter(&$view, &$query) {
+  if($view->name === '2015_omr_des_listning') {
+  	
+  	//print("YEY från modulen i sites/all/modules/kiv_sortering/kiv_sortering.module");
+  
+  
+  
+    /**
+     * Order = (rating * 10) – (hours old / 2)
+     * Note: the rating field is divided by 2 because in the DB the rating is out of 100
+     */
+    // $view->query->orderby[0]['field'] = "(if(field_data_field_rating.field_rating_rating, field_data_field_rating.field_rating_rating,0) / 2) - ROUND((UNIX_TIMESTAMP(NOW())-created)/60/60/2)";
+    // $view->query->orderby[0]['direction'] = "DESC";
+
+    // $view->query->orderby[1]['field'] = "created";
+    // $view->query->orderby[1]['direction'] = "DESC";
+    
+    
+    
+    
+    
+  }
+}

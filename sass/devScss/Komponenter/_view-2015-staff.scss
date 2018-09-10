@@ -1,0 +1,14 @@
+﻿.view-2015-staff{
+    .listheight{
+        min-height:160px;
+    }
+
+
+}
+/*Overrides LIZTA bilder*/
+.view-2015-staff .kivlistview .imgplaceholder img, 
+.view-2015-dokument .kivlistview .imgplaceholder img{
+    max-width: 160px;
+    min-width: 160px;
+    width: 100%;
+}

@@ -1,0 +1,208 @@
+﻿
+.artikelMainContainer{
+    h1,h3{
+        color:$orange;          
+    }
+    h2{color:$black;    
+    }
+    .level1{
+        //padding-bottom:3rem;                  
+    }   
+    
+    .success{ width:100%;}
+    .row{
+        &:first-child{
+            margin-bottom:0rem;
+        }
+    }
+    .artikeltopImage{
+        //display:none;
+        margin-bottom:-7.5rem; //obs hänger ihop med _artikelmenu.scss .atikelMenuBlock margin-top
+        max-height:300px;
+        min-height:150px;
+        overflow:hidden;
+        img{min-height:150px;}
+    }   
+    .artikelwrapper {
+        padding-top:2.5rem;
+        /*.medium-4 {       
+            background-color:$beige;                  
+        }*/ 
+         a{
+            color:$lightorange;
+            text-decoration:underline;
+         }
+         li{
+            a{  
+                text-decoration:none;
+            }
+        }
+         .button{
+            text-decoration:none;
+            color:$white;
+         }
+         
+       
+    }
+    .artikelbild{
+        margin:1.5rem 0rem;
+    }   
+}
+.faktabox{
+    background-color: $lightermediumgrey;
+    h1,h2,h3{
+        color:$orange;
+    }
+}
+
+.artikelButton {
+    padding-top:0px !important;
+    padding-bottom:0px !important;
+}
+
+.artsidecontainer{
+    display:block;
+    padding:1rem 1.2rem 1rem 1.2rem;
+   
+    @media #{$large-up} {
+        //padding:1rem 2rem 2rem 2rem;  
+        padding-bottom: 2rem;
+        padding-left: 0.7rem;
+        padding-right: 2rem;
+        padding-top: 0.5rem;
+    }
+    background-color:$lightermediumgrey;     
+    //background-color:$white;  
+    ul{
+        list-style:none;
+        margin-left:0px;
+    }
+    li{
+        list-style:none;
+        border-bottom:2px solid $smoke;
+        margin-bottom:0.5rem;
+        padding-bottom:0.5rem;
+    }
+    h2{ 
+          text-transform: uppercase;          
+    }
+    h3{
+        font-size:$omoss-h3-font-size;
+          text-transform: uppercase;          
+    }
+    p{ font-size:0.9rem;}
+   
+    & .kontaktkort{
+        font-size:0.9rem;
+         & .namn{
+            font-weight:bold;
+             line-height:1.1rem;
+             text-transform: uppercase;
+        }
+        & .avd{
+            color:$black;
+            margin-bottom:0.4rem;
+            line-height:1.2rem;
+        }
+       & .artikelkontatkort{
+            font-weight:bold;
+             line-height:1.1rem;
+             text-transform: uppercase;
+        }
+        & .artikelFakta{
+            color:$black;
+            margin-bottom:0.4rem;
+            line-height:1.2rem;
+        }
+         
+    }
+     .success{ width:100%;}
+    
+}
+.standardbutton{
+    text-align:center;
+    padding-right:0.7rem;     
+}
+
+.l-main{display:none;} // ta bort denna sedan !!!
+.view-2015-supporting-articles,.view-2015-supporting-articles-suo{
+    .level2{
+    	    padding-top:3rem;  
+            padding-bottom:3rem;        
+            &:nth-child(odd){
+                background-color:$lightermediumgrey;
+                .artsidecontainer{
+                    background-color: $lightgrey;
+                }
+            }
+        }       
+    }
+
+.artmaincontent{       
+     h1,h2,h3,h4,h5{
+        color:$black;          
+    }
+     h3{font-size:1rem;
+        font-weight:600;
+     }
+     .filicons {
+          h3{font-size:1.5rem;
+        font-weight:200;
+     }
+     }
+       @media #{$medium-up} {padding-right: 0.5rem; }
+       @media #{$large-up} {padding-right: 10rem; }
+
+      
+
+
+       blockquote{
+           @extend .citatblock;
+           border-left: 10px solid $smoke;
+           padding: 0 0 0 2.0875rem;
+           margin-top:2rem;
+           margin-bottom:2rem;
+           //quotes: "\201D""\201D""\2018""\2019";
+           quotes: "”" "“" "‘" "’";
+           p {
+                @extend .citatblock;
+                &:before {
+                  color: #ccc;
+                  content: open-quote;
+                  font-size: 4em;
+                  line-height: 0.1em;
+                  margin-right: 0.05em;
+                  vertical-align: -0.4em;
+                  font-family: "bodoni-urw";
+                   font-weight:800;
+                }
+           }
+        }
+
+    .citatblock{
+            color: #000;
+            font-size: 2rem;
+            font-weight: 100;
+            line-height: 1.4;
+            margin-left: 0px;
+        }
+     .kulturkatFoto{
+            display:inline;
+            font-style:italic;
+            font-weight:100;           
+        }
+}
+.element-invisible{display:none;}
+
+.node-type-informationssida{
+    .ajimage-omrade-nod{
+         img {
+             object-fit:cover;
+             min-height:200px;
+        }
+    }
+}
+.top-bild-wrapper {
+    margin-bottom: 3rem !important;
+}
+

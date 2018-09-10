@@ -1,0 +1,22 @@
+﻿
+// innehålls menyn samma yta som om oss stilar bara själva menyn här
+
+.row-node-top-menu{
+	margin-top:-2rem;
+ 	margin-left:2rem;  
+     padding-bottom:1.5rem;
+    ul{
+	    list-style:none;  
+        a{
+            &::before {
+             @extend .toggleimageBaseEXTEND;      //finns i :mainmenu
+            
+             background-image: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/PilMeny28.png");            
+            float: left;
+            }        
+        }
+        li{
+            margin-bottom:0.8rem;
+        }    
+    }
+}

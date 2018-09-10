@@ -1,0 +1,53 @@
+﻿.searchMainWrapper{   
+    background-color:$ingressbggrey;
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+        width: 100%;
+    @media #{$small-only}{
+        min-height: 150px;
+    } 
+    #edit-submit{
+        margin-left:0.1rem;
+        height:50px; 
+        line-height:13px;
+        background-color:$aluminum;
+        //border:1x solid #444;
+    }
+    .searchmainContent{
+        input {
+            float: left;
+        }
+        .searchinputbox {
+            height: 50px;
+            width: 90%;
+            font-size:1.5rem;
+            border:0px;
+            @media #{$small-only}{
+                width: 75%;
+             }
+        }
+        .searchButton {
+            height: 50px;
+           float:right;
+            //min-width: 19%;
+            background-color:transparent;
+            padding:0px;
+            margin:0px;
+        }
+    } 
+
+    #contentfilterblock{
+        input{ height: 50px;
+            width: 90% !important;
+            font-size:1.5rem;
+            border:0px;
+            margin-right:4px;
+            @media #{$small-only}{
+                width: 75%;
+             }
+            }
+
+    } 
+}
+

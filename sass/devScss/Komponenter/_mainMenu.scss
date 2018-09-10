@@ -1,0 +1,131 @@
+﻿
+.off-canvas-list{
+    font-size:0.85rem;    
+   
+}
+
+ul.off-canvas-list {
+    margin:0rem 1.0rem;
+    text-transform: uppercase;
+    font-stretch:condensed;
+    font-size:1rem;
+    .nolink{
+        color:$white;
+        margin-top:0.5rem;
+        margin-left:0.5rem;
+        display:block;
+    }
+    li{
+        line-height:1.4;
+        a{
+            border:0px;
+            border-color: $tuatara;
+            &:first-letter{
+                text-transform: capitalize;
+            }
+            &:hover {
+                background-color:transparent;
+            color: $orange;
+            }
+        }
+    }     
+}
+
+ .toggleimageBaseEXTEND{    
+          background-attachment: scroll;
+            background-clip: border-box;
+            background-color: rgba(0, 0, 0, 0);
+           // background-image: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/MosaikStang28.png");
+            background-origin: padding-box;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            content: "";
+            display: block;
+            //float: right;
+            height: 20px;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0.5rem;
+            margin-top: 2px;
+            width: 20px;       
+    }
+
+ul.multiColumn {  
+    /*column-count: 2;
+    column-gap:0.5rem;
+    margin-left:0.5rem;
+    margin-right:0.5rem;*/
+    margin-left:0px;
+    li{
+        line-height:1.4;
+    }      
+
+    a{
+        &::before {
+             @extend .toggleimageBaseEXTEND;           
+            
+             background-image: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/PilMeny28.png");            
+            float: left;
+        }
+    }    
+}
+
+.menu-mlid-7255{
+ cursor: pointer; cursor: hand;
+
+}
+
+.togglebgimageshow{
+        
+     &::after {
+          @extend .toggleimageBaseEXTEND;                                
+            background-image: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/MosaikPlus28.png");          
+            float: right;         
+        }
+    
+}
+
+.togglebgimagehide{
+      
+    &::after {
+          @extend .toggleimageBaseEXTEND;               
+            background-image: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/MosaikStang28.png");            
+            float: right;            
+        }
+    
+}
+
+/*.menu-mlid-6811{
+    span{
+        &::after {
+           @extend .toggleimageBaseEXTEND;               
+            background-image: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/MosaikStang28.png");            
+            float: right;
+        }
+    }
+}*/
+.off-canvas-submenu.multiColumn{     
+    list-style:none;
+    font-size:1rem;   
+    text-transform: lowercase;
+    font-stretch:normal;
+    margin-bottom: .9rem;
+    //padding-bottom:1rem;    
+    //height:21rem;
+    
+    li{
+         border-top:0px;
+    }
+    /*a{         
+        color:#000;
+        border-bottom:1px solid $tuatara;
+        border-top:0px;
+        margin-left:0px;
+        padding:0.2rem 0rem 0rem 0.2rem;
+        font-size:0.8rem;
+        
+    }*/
+}
+
+

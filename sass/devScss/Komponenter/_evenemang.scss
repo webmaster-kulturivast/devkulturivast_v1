@@ -1,0 +1,41 @@
+﻿
+// gör overwrites för evenemangvyn
+.evenemang{
+    @extend .kivlistview;
+    position:relative;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    .imgplaceholder{
+       // margin-top:0.5rem;
+        padding-right:0px;
+        padding-left:0px;
+         //margin-bottom:0.5rem;
+         
+    }    
+    .kivlist {
+        .showingresstext{ margin-right: 0.3rem;}
+        .imgplaceholder {            
+            img{ min-width: 100%;}
+        }
+        .crop-height {      
+          @media #{$small-up} { 
+            max-height: 100%;	     
+	      }    
+	      @media #{$medium-up} { 
+            max-height: 4.3rem;
+	        overflow: hidden; 
+	  } 
+      
+    }
+    }
+   .apsisbtnbox {        
+        padding-top:0.2rem;
+        a{
+            margin-bottom:0px;
+         }
+    }
+   .button.expand, .button.expand{
+        padding:1.1rem;
+    }
+}
+

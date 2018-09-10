@@ -1,0 +1,17 @@
+﻿
+.pager-next{
+    border:1px solid $gainsboro;
+     background-color:$orange;
+     a{
+         padding:4rem;
+        color:$white;
+        &:hover{ 
+           
+        }
+     }
+     &:hover{
+         background-color:$orangeLight;
+         color:$black;
+     }
+}
+

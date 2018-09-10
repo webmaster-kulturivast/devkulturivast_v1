@@ -1,0 +1,230 @@
+﻿.kivlistview{
+    //background-color: $vapor;
+    padding: 0px 1em; 
+    margin-bottom:0.5rem;
+   color:$black; 
+    //border-bottom:1px solid $gainsboro;
+    i{
+        font-size:2.3rem;
+        color:$gold;
+    }
+     h4{        
+        margin-top:0px;
+        font-size:1.1rem;
+        //font-weight:normal;
+        text-transform:none;
+        a{ color:$white;   }
+    }
+    h5{
+        font-size:1.2rem;
+        margin-bottom:0px;
+        color:$lightmediumgrey;
+        //font-weight:normal;
+        //padding-top:0.6rem;
+        text-transform:none;
+       
+    }
+    .pluss{
+        padding-top:0.6rem;
+        padding-bottom:0rem;
+        text-align:right;
+    }
+    .open {
+        img{
+            max-height:24px;
+        }
+    }
+    .closed {
+       img{
+            max-height:24px;
+        }
+    }
+    .titlebox{padding-top:0.6rem;padding-bottom:0rem;}
+    .imgplaceholder{
+       // margin-top:0.5rem;
+        padding-right:0px;
+        padding-left:0px;
+         //margin-bottom:0.5rem;
+         //width:270px;
+         img{ width: 100%; min-width:245px;
+              max-width:230px;
+         }
+           background-color:$darkgrey; 
+    } 
+    .listheight{
+        min-height:120px;
+        background-color:$darkgrey; 
+    }
+    .ingresstext{
+        display:none;
+        width:100%;        
+         @media #{$medium-up} {
+           padding-right:5rem;
+	      } 
+        @media #{$large-up} { 
+           padding-right:10rem;
+	      } 
+        
+        padding-top:0.2rem;
+        background-color: $ingressbggrey;
+    }
+    .showingresstext{
+        display:none;      
+
+    }
+
+    .kivlist {
+        //background-color:$darkgrey; 
+        margin-bottom:0.5rem;
+        margin-left:0px;
+        margin-right:0px;
+        &:hover{
+            opacity:0.9;
+        }
+        .showingresstext{
+            float:right;
+            margin-right:-5px;
+            margin-top:-10px;
+        }
+        .showingresstext_list{float:right; margin-right: -5px; margin-top:-10px;}
+        .columns{
+            float:left !important;
+        }
+        h4{color:$white;}
+
+        .imgplaceholder{
+           @media #{$small-only} {
+                display:none;
+                }
+        }
+    }
+    .flip {
+	    /*-webkit-transform: rotate(180deg);
+	    -moz-transform:    rotate(180deg);
+	    -ms-transform:     rotate(180deg);
+	    -o-transform:      rotate(180deg);*/
+	    transform:         rotate(180deg);
+	    /* needed? not sure */
+	    zoom: 1; 
+    }     
+    h5{
+        .date-display-single{
+            @extend .datumtemplate;
+        }
+    }
+    .evenemang_date{
+        .date-display-single{
+                @extend .datumtemplate;
+            }   
+    }
+   .date-display-single{
+       color:$white;
+   }
+}
+
+    .listcontent{        
+        .row{min-width:245px;background-color:$darkgrey;}
+        h5{margin:0px;
+           margin-top:0.5rem;
+        }
+        h4{margin:0px;}
+        .listheight{
+            color:$white;
+            a{color:$white;}
+            .rub{
+                float:left; 
+                margin-left:-6px;
+                max-width:350px;
+            }
+        } 
+        .apsisbtnboxList {
+             @media #{$medium-up} { 
+                //float:right; 
+                width:35%;  
+	        }    
+            
+            .button{
+                width:100%!important; 
+                text-align:center; 
+                float:right;
+            }
+        }
+    }
+    .apsisboxmain{
+        padding-top:0.4rem;
+        max-width:110px;
+        a{
+            margin-bottom:0px;
+            &:empty {
+                display: none !important;
+            }
+         }  
+        .button.expand{
+            font-size:0.8rem;
+            font-weight:200;
+            margin-top:1.5rem;
+        }     
+    }
+
+    .apsisbtnbox {        
+         @extend .apsisboxmain;
+    }
+
+    .apsisbtnboxList {  
+        @extend .apsisboxmain;
+        //max-width:144px;
+        @media #{$small-up} { 
+             margin-bottom:2px;	 
+             margin-left:-6px;    
+	    }    
+        
+    }
+    
+   .ingresstextlista{display:none;}
+
+  .view-press-gallery{
+      .kivlistview{
+        .imgplaceholder{
+            //text-align:center;
+            img{
+                max-width:180px;
+                min-width:140px;
+            }
+        }
+     }     
+      .showingresstext_list{
+          display:none;
+      }
+  }
+
+  .view-id-press_gallery.view-display-id-page_2 .view-filters{
+    margin-bottom:1rem;
+  }
+
+  .view-2015-dokument{
+      .kivlistview{
+          .imgplaceholder{
+            //text-align:center;
+            img{
+                max-width:180px;
+                min-width:140px;
+            }
+          }
+          .listheight{
+              min-height: 130px;
+          }
+      }
+      .showingresstext_list{
+          display:none;
+      }
+  }
+
+  .view-2015-staff{
+
+      .showingresstext_list{
+          display:none;
+
+      }
+  }
+
+  

@@ -1,0 +1,28 @@
+﻿.menybreadcrumb{
+    height:26px;
+    .mbc_navlinklist{
+        li{
+            display: inline;
+            list-style-type: none;
+            border-left:1px solid $jumbo;
+            text-transform:uppercase;
+            font-size:$breadcrumb-font-size;
+            padding-right:2px;
+            color: $jumbo  !important;
+
+            &:first-child {                
+                border-left:0px; 
+                padding-left:0px;
+            }
+            &:last-child {
+                padding-left:3px;
+            }
+            a{  
+                color: $jumbo  !important;
+                padding-right:4px;
+                padding-left:2px;
+                &:hover{color: $jet !important;}                
+            }            
+        }
+    }    
+}

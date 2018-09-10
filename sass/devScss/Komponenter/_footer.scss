@@ -1,0 +1,157 @@
+﻿
+// extend fotbakgrunden ////////////////////////////////////////////////////////////////////////////////////////////////////////
+ .thomasbackground{
+        background-color: $black;
+        //background-image:url("https://www.fusioncorpdesign.com/packages/fruitful/themes/fruitful/img/footerbg.jpg" );
+        background-image:url("http://kulturivast.se/sites/all/themes/kivnew/images/Bakgrund-fot-karta.png" );
+        background-repeat:  no-repeat;
+        background-size: cover;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top:0px !important;
+         @media #{$medium-up} {
+            padding-left: 4rem;
+            padding-right:4rem;
+        }
+        @media #{$small-only} {
+                         padding-left: 1rem;
+                         padding-right:4rem;
+	                }
+        padding-top:2rem;
+        color:$white;
+    }
+ // -----------------------------------------------------------------------------
+    .ajbackground{
+         background-color: $black;
+        //background-image:url("https://www.fusioncorpdesign.com/packages/fruitful/themes/fruitful/img/footerbg.jpg" );
+        background-image:url("http://kulturivast.se/sites/all/themes/kivnew/images/Bakgrund-fot-karta.png" );     
+        background-repeat:  no-repeat;
+        background-size: contain;
+        //background-attachment: fixed;
+        background-position: center; 
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top:0px !important;
+         @media #{$large-up} {
+            //background-size: contain;
+         }
+         @media #{$medium-up} {
+            padding-left: 4rem;
+            padding-right:4rem;
+                      
+        }
+        @media #{$small-only} {
+            padding-left: 1rem;
+            padding-right:4rem;
+            background-attachment: fixed;
+            background-size: cover;
+	    }
+        padding-top:2rem;
+        color:$white;
+    }
+// /////////////////// ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.footencol{padding-left:0px; padding-right:0px;}
+
+.footer {
+
+    @extend .thomasbackground;
+
+    a{
+        color:$white;
+    }
+
+    .vglogo{
+	    width:10rem;
+        text-align:left;
+        margin-bottom:2rem;
+    }
+    .annonsrow{
+	    
+        img{
+            min-width:224px;
+            max-width:224px;
+            margin-bottom:2rem;
+        }
+    }
+    .footdelare{      
+	    margin-top:10rem; 	
+
+        .socialiconlist{
+            
+             @media #{$small-up} {
+                    float:left;
+                    margin-top:1.2rem;
+                    margin-left:0px !important;
+	            }
+              @media #{$medium-up} {
+                    float:right;
+                }
+
+            li{
+                list-style:none;
+                
+	            float:left;
+                @media #{$small-only} {
+                    margin-right:0.5rem;
+	            }
+                @media #{$medium-up} {
+                    margin-left:0.5rem;
+                }
+                @media #{$large-up} 
+                {
+                    margin-left:0.96rem;
+                }
+            }
+            img{
+	            
+                @media #{$small-up} {
+                    max-width:51px;
+	            }
+                @media #{$medium-up} {
+                    max-width:50px;
+                }
+                @media #{$large-up} 
+                {
+                    max-width:63px;
+                }
+            }
+        }
+        .tab-bar-logosection {
+            margin-right: 5em;
+            margin-top: 0.31rem; 
+        }
+        .foot-kivlogo-container {
+            display: table-cell;
+            vertical-align:bottom;
+            height:60px;
+            img{
+                width:210px;
+            }
+        }
+        .footdelarehrbox hr{
+	        margin-top:0px;
+            padding:0px;
+        }
+    }
+  
+    .adressrow{
+        div{
+            text-align:left; 
+            font-size:1rem;
+            font-weight:200;
+            margin-bottom:1rem;
+        }
+        .tab-bar-logosection {
+            margin-right: 5em;
+            margin-top: 0.31rem; 
+        }
+        h3{
+          font-size:1rem;
+          font-weight:600;
+          margin-bottom:0px;
+	      color:$white;
+        }
+    }
+
+}//footer2 slut

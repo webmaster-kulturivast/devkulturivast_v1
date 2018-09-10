@@ -1,0 +1,122 @@
+<?php
+
+/**
+ * @file
+ * .
+ *
+ *
+ * @author ANDREAS JOSEFSSON 2015>
+ */
+
+
+function kiv_sortering_views_query_alter(&$view, &$query) {
+  // if($view->name === '2015_j') {
+  	
+  // 	//print("kiv_sortering_views_query_alter");
+  //   if ($_GET["sort"]) {
+  //       $sort = check_plain(trim(strtolower($_GET["sort"])));
+
+  //       switch ($sort) {
+  //           case "title":
+  //               //$query->orderby = array("node.title ASC");
+  //               $query->orderby[] = array('field' =>'node_title', 'direction' => 'DESC');
+  //               break;
+  //           case "order":
+  //               //$query->orderby = array("node.nid DESC");
+  //               $query->orderby[] = array('field' =>'node_nid', 'direction' => 'DESC');
+  //               break;
+  //       }
+  //   }
+  // }
+}
+function kiv_sortering_views_pre_render(&$view) {
+	
+  //START---------------------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------------------------- 
+  // kollar så att vi ändrar i rätt vy
+  // if VY kategorier START
+//if($view->name == '2015_json_data' && $view->current_display == 'page'){
+//		print("test");
+//		dpm($view, __FUNCTION__);
+//		}
+
+	
+ // if($view->name == '2015_json_data' && $view->current_display == 'page' || $view->name == '2015_omr_des_listning'){
+  if($view->name == '2015_omr_des_listning'){
+		//dpm($view, __FUNCTION__);
+  // if VY kategorier START och speciel display i JSON data vyn
+  
+    /// kör sortering endast om något finns att sortera i requested Category
+    if(isset($view->build_info['substitutions']['%1'])){
+      
+      $mainCategory = $view->build_info['substitutions']['%1']; // visar av användaren vald kategori
+      
+      //---------------------------------------------------------------------------------------------------------
+      // Array:erna ---------------------------------------------------------------------------------------------  
+      $MainCategoryReturnArray = array();
+      $MainCategoryArray= array();
+      $RelatedCategoryArray= array();
+      //---------------------------------------------------------------------------------------------------------
+      
+      //---------------------------------------------------------------------------------------------------------
+      // vy datat innehåller hela listan osorterad  
+      $arrViewResult = $view->result;
+      //---------------------------------------------------------------------------------------------------------
+      
+      //---------------------------------------------------------------------------------------------------------
+      // lägg till alla fält in i MainCategoryReturnArray där huvudkategorin är av användaren vald kategori 
+      foreach($arrViewResult as $tmpMcat)  {
+        $valdcat = $tmpMcat->field_field_category['0']['rendered']['#title'];
+        
+        if($valdcat == $mainCategory){
+          array_push($MainCategoryArray,$tmpMcat);
+          //print($view->build_info['substitutions']['%1']. '<br />');
+        }       
+      }   
+      //---------------------------------------------------------------------------------------------------------
+      
+      
+      //---------------------------------------------------------------------------------------------------------
+      // lägg till alla fält in i $RelatedCategoryArray där relaterade kategorier är lika med av användaren vald kategori 
+      foreach($arrViewResult as $tmpMcat)  {
+        
+        $tmpAddToArr= 0;
+        
+        //gå igenom alla items i arrayen och se om någon matchar valdcategori
+        foreach( $tmpMcat->field_field_underomr_de as $tmpUnderCat){ 
+          
+          if($tmpUnderCat['rendered']['#title'] == $mainCategory){
+            $tmpAddToArr= 1;
+            break; 
+          }       
+        }
+        if($tmpAddToArr== 1){
+          array_push($RelatedCategoryArray,$tmpMcat);
+        }     
+      }
+      //---------------------------------------------------------------------------------------------------------
+      
+      
+      //---------------------------------------------------------------------------------------------------------
+      //Slå ihop arrayerna så att maincategory kommer överst och dom relaterade efter   
+      $MainCategoryReturnArray = array_merge($MainCategoryArray, $RelatedCategoryArray);
+      //---------------------------------------------------------------------------------------------------------
+      $count = count($MainCategoryReturnArray);
+      
+      $view->init_pager();
+      $view->set_items_per_page('10');
+
+      $view->query->pager->total_items = $count;     
+      $view->query->pager->update_page_info();
+      //print($count);
+      //---------------------------------------------------------------------------------------------------------
+      //Returnera Den nysorterade datan 
+      $view->result = $MainCategoryReturnArray;
+      //---------------------------------------------------------------------------------------------------------
+			/*$view->query->pager->update_page_info();*/
+      
+    }// isset END 
+    
+  }// if VY kategorier END
+  
+} // Function END

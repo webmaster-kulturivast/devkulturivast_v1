@@ -1,0 +1,27 @@
+﻿.artikelcontainer{
+    .columns {
+        padding:0px;
+
+    }
+
+}
+
+
+.submenubase{    
+        text-transform: uppercase;
+        height:3rem;
+        line-height:3rem;
+        padding:0px 1.0rem;  
+        //margin-right:2rem;
+    }
+.arrowbase{   
+        content: "";
+        position: absolute;
+        bottom: -0.8rem;
+        left: 2rem;
+        border-style: solid;
+        border-width: 20px 20px 0;           
+        display: block;
+        width: 0;
+        z-index: 1;  
+}

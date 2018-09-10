@@ -1,0 +1,126 @@
+﻿
+#filtersortering{
+     //margin-right:0.5rem;
+    a{ 
+        img{
+             @media #{$medium-up} {
+                width:36px; height:36px;
+             }     
+             @media #{$small-only} {
+                 width:25px; height:25px;
+             }     
+
+        }
+    }
+} 
+#contentfilterblock{
+    //line-height:2.5rem;
+    margin-top: 0.5rem;
+}
+
+.filterutanforomrade{
+     margin-top:1.0rem; 
+}
+#filtersortering{
+    margin-top: 3.0rem;
+    display:block;
+}
+
+.view-2015-evenemang{
+    #filtersortering{
+       @extend .filterutanforomrade;
+    }
+}
+.view-2015-produktioner{
+    #filtersortering{
+         @extend .filterutanforomrade;        
+    }
+}
+.view-2015-dokument{
+     #filtersortering{
+         @extend .filterutanforomrade;        
+    }
+}
+.view-press-gallery{
+     #filtersortering{
+         @extend .filterutanforomrade;        
+    }
+}
+
+
+.views-submit-button{
+    margin-top:2rem; 
+    button{
+        margin-left:0px !important;
+    }
+}
+
+#edit-field-production-tid{
+     margin-right:0.5rem;
+}
+
+.form-item.form-type-select{
+    line-height:2.5rem;
+}
+
+.baseformkomponenter{
+  height: 2em;
+  padding: 0.05em;
+  padding-left:0.25rem;
+  min-width: 108px;
+  color:$black;
+  font-size:0.85rem;
+  margin-bottom:0.5rem;
+}
+#contentfilterblock select{
+ @extend .baseformkomponenter;
+  
+ }
+#contentfilterblock input{
+ @extend .baseformkomponenter;
+ //max-width: 218px;
+}
+#contentfilterblock button{
+ 
+}
+//
+.views-submit-button {
+    padding:0px!important;
+}
+
+.views-exposed-widgets{
+    padding:0px;
+    margin-bottom:0px !important;
+
+    label{display:none;}
+    
+} 
+.views-exposed-form .views-exposed-widget .form-submit {
+    margin: 0rem !important;
+    //margin-left:1rem !important;
+    padding:0.1rem;
+    min-width:8rem;
+}
+/*#drpFilter, #drpSortering{  
+   background: url(/sites/all/themes/kivnew/images/drpicon.png) no-repeat right $gold;
+    border-radius:0px 10px 10px 0px;
+   border: 1px solid $gold;  
+   background-size: 1.8rem 1.8rem;
+   color:$white;
+   option {    
+        background: $white;
+        color:$gold;
+        padding: 0.3rem 0.2rem;
+        text-shadow:0px;
+        border:0px;
+    &:checked { box-shadow: 0 0 10px 100px $gold inset; }
+    }
+}
+#filtersortering{
+     margin-right:0.5rem;
+a{ 
+    img{width:44px; height:44px;}
+    }
+} 
+#contentfilterblock{line-height:2.5rem;}*/
+

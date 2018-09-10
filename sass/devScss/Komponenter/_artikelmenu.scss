@@ -1,0 +1,91 @@
+﻿.artikelsubmenuContent{
+    display:none;
+    background-color:$darkergrey;       
+    color:$white;
+    ul{
+        list-style:none;
+        padding:1.5rem;  
+        padding-left:0rem;
+
+        //column-gap:1.5rem;
+        margin-left:0rem;
+        margin-right:2.5rem;
+    }
+    li{
+       
+        zoom:1;
+        *display:inline; /* this fix is needed for IE7- */        
+        padding:0.1rem;
+        padding-left:0.6rem !important;
+        margin-left:1rem !important;
+        margin-right:1.5rem;
+        overflow:hidden;
+        text-transform: lowercase;
+        min-width:20%;
+    }
+    .menucolumns{
+        @media #{$small-up} {column-count: 1;}
+        @media #{$medium-up} {column-count: 2;}
+        @media #{$large-up} {column-count: 4;}
+    }
+    a{
+        margin-right:0.4rem;
+        margin-top:4px;
+        &:before {
+            @include arrowiconbefore("iconopenarrowright.png");
+        }
+    }
+    .row:first-child{
+        margin-bottom:1.5rem;
+    }
+    .item-list{
+        color:$black;
+    }
+    
+}
+.atikelMenuBlock{
+    //margin-left:1rem;
+    margin-top:2.5rem; //obs hänger ihop med _artikelmain.scss .artikeltopImage margin-bottom
+     @media #{$medium-only} { margin-top:3.5rem;}
+    //padding-right:0px;
+    .artikelMenu{
+        text-transform: uppercase;
+        height:2rem;
+        line-height:2.1rem;
+        
+        background-color:$black;
+        margin-top:0.7rem;
+    }
+    a{
+        margin-left:1rem;        
+    }
+    //.artikelShowMenuLink{
+    .lasMerOmOssLink{
+        	color:$white;
+            &:hover{
+                color:$aluminum;
+            }
+    }
+    .arrowhead{
+        &:after 
+        {
+         content: "";
+        position: absolute;
+        bottom: -0.8rem;
+        left: 2rem;
+        border-style: solid;
+        border-width: 20px 20px 0;           
+        display: block;
+        width: 0;
+        z-index: 1;                   
+         border-color: $black transparent;            
+        }
+    }
+    #contentHeader{
+        h1{color:$black;
+           text-transform:none;
+
+        }
+    }
+}
+

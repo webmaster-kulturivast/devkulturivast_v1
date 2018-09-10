@@ -1,0 +1,42 @@
+﻿    .crop-height {      
+          @media #{$small-up} { 
+            max-height: 100%;	     
+	      }    
+          @media #{$medium-up} { 
+            //max-height: 7.3rem;
+            max-height:70px;
+	        overflow: hidden; 
+	      } 
+	      @media #{$large-up} { 
+            max-height: 4.3rem;
+	        overflow: hidden; 
+	      } 
+    }
+    .noimage{background-color:$gold; width:100%; height:5rem;}
+    img{
+        .scale {
+            /* corrects small inline gap at bottom of containing div */
+	        display: block;            
+	        /* just in case, to force correct aspect ratio */
+	        height: auto !important;
+            display: block; /* corrects small inline gap at bottom of containing div */
+            width: 100%; /* corrects obscure Firefox bug */
+            max-width: 100%;
+            /* just in case, to force correct aspect ratio */
+            height: auto !important;
+            /*width: auto\9; 
+            /* ie8+9 - use modernizr instead of this \9 hack */
+            /* lt ie8 */
+            -ms-interpolation-mode: bicubic;
+	        /* optionally force a minimum size if img src size is known: */
+	        /* max-height: 50px;  max-height of .crop-height */
+	        /* min-width: 480px; /* proportional to above */ 
+        }
+        .flip {
+	        /* actually, aligns left within .cropheight */
+          float: right;
+          margin-top:-24px;
+	        /* clearfix after? */
+        }
+        
+    }

@@ -1,0 +1,108 @@
+﻿.mosaikblockheader{margin-top:1.5rem;}
+
+.mozaikitems {   
+    padding: 0px 1em;
+    padding-right:0.9rem; 
+    padding-bottom:0rem;
+    margin-bottom:1.5rem;   
+    color:$black;  
+    i{
+        font-size:2.3rem;
+         color:$gold;
+    }
+    h4{   
+        color:$white;       
+        margin-top:0px;
+         font-size:1.3rem;
+         font-weight:200;
+         text-transform:none;
+    }
+    a{
+        color:$white;  
+    }
+    h5{
+        font-size:1.3rem;
+        margin-bottom:0px;
+        color:$lightmediumgrey !important;
+        font-weight:200;
+        padding-top:6px !important;
+        text-transform:none;
+    }
+   .showingresstext {
+       width:24px !important; 
+       height:24px; 
+       float:right;
+       margin-right:-0.5rem;
+       i{
+            img {
+                margin-top:-1.3rem !important
+            }       
+        }
+   }
+   .ingresstext{
+        display:none;
+        width:220px !important;
+        padding-right:0rem !important;
+       p{
+           margin-left:-5px;
+           margin-top:5px;
+           margin-right:2px;
+       }
+    }
+   .row { background-color: $darkgrey;}
+   .listheight{
+        padding-left:10px;
+        min-height: 5rem !important;
+   }
+   .apsisbtnbox{
+       //float:right;
+       padding-top:0px;
+     .button.expand{
+           margin-left:0px;
+           max-width:110px; 
+           margin-bottom:0.7rem;
+       }
+   }
+ 
+    
+}
+
+.ingresstext{
+    display:none;
+    width:220px;
+}
+.ingresstextlist{
+    display:none;    
+}
+
+
+.item{
+       width:250px;
+    }
+  
+
+@media only screen and (min-width: 50.063em) and (max-width: 64em) { 
+  .wrapper{
+    position: relative;	
+    width: 100%;	
+    height: 100%;	
+    margin: 0px auto;	  
+  }
+} /* min-width 641px, medium screens */
+/*#thomastest{
+    @media #{$small-up} { }
+@media #{$small-only} { background-color:#c1aa6c;} //guld
+
+@media #{$medium-up} {}
+@media #{$medium-only} { background-color:#136c16;} //grön
+
+@media #{$large-up} { }
+@media #{$large-only} { background-color:#333; } //mörkgrå
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { background-color:#999; } //ljusgrå
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { background-color:#334455; }
+
+}*/

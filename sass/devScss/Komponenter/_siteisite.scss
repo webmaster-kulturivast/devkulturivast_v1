@@ -1,0 +1,88 @@
+﻿
+.top-bg-colors{
+    .color-top-black{
+	    background-color: #000;
+    }
+    .color-top-white{
+        background-color: #fff;
+    }
+    .color-top-grey333{
+        background-color: #333;
+    }
+     .color-top-grey666{
+        background-color: #666;
+    }
+
+}
+
+
+.zf-2col-stacked{
+  @extend .top-bg-colors;
+}
+
+.zf-2col-bricks{
+  @extend .top-bg-colors;
+}
+
+.page-taxonomy-term{
+    .ajimage-omrade-nod{
+        object-fit:contain;
+    }
+}
+
+//Frame ---s
+.page-taxonomy-term-980{
+    .omossspace h1{ 
+        color:transparent !important;
+    }
+    .breadcrumb-BG{
+        background-color:$white;
+    }
+    .ajimage-omrade-nod{
+        img{
+            object-fit:contain;
+        }
+    } 
+    .top-bild-wrapper {
+        margin-bottom: -100px !important;
+    }
+} 
+//de så barnens bok ---s
+.page-taxonomy-term-2192{
+    .omossspace h1{ 
+        color:transparent !important;
+        margin-top:-1rem;
+    }
+    .breadcrumb-BG{
+        background-color:$white;
+    }
+    .ajimage-omrade-nod{
+        img{
+            object-fit:contain;
+        }
+    } 
+    .top-bild-wrapper {
+        margin-bottom: -60px !important;
+        margin-top:60px !important;
+    }
+} 
+//bokmässan-2016
+.page-taxonomy-term-2166{
+
+    .breadcrumb-BG{
+        background:$white;
+    }
+    .omossspace{
+        h1{
+            color:$white;
+        }
+    }
+    .omradesnamn{
+        color:$lightermediumgrey;
+    }
+    #breadcrumbval{
+        a{
+            color:$lightermediumgrey;
+        }
+    } 
+}

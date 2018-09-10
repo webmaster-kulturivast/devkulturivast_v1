@@ -1,0 +1,20 @@
+﻿.item-list{
+    .pager-load-more{
+        margin-top:1rem;
+        li{
+            background-color:$ingressbggrey;
+            a{ 
+                color:$black;
+            }
+            &:hover{
+                background-color:$gainsboro;
+            }
+        }
+    }
+     ul{
+        li {
+          margin-left:0px;
+        }
+    }
+    .pager-next{border:0px;}
+}

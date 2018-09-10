@@ -1,0 +1,120 @@
+﻿
+
+@mixin fixed($width, $direction) {
+  position: absolute;
+  width: rem-calc($width) + $column-gutter;
+  top: 0;
+  @if $direction == left {
+    left: 0;
+  } @else {
+    right: 0;
+  }
+}
+@mixin fluid($width, $direction) {
+  @if $direction == left {
+    padding-right: rem-calc($width) + ($column-gutter * 1.5);
+  } @else {
+    padding-left: rem-calc($width) + ($column-gutter * 1.5);
+  }
+}
+@mixin min($width) {
+  width: $width + px;
+  float: left;
+  box-sizing: content-box;
+  + .column {
+    float: left;
+  }
+}
+
+// används för att lägga till ikoner i a:before bara att lägga till filnamnet ifrån mappen images
+@mixin arrowiconbefore($file) { 
+        content: "";
+        display: block;
+        background: url(#{$current-kiv-domain-url}/sites/all/themes/kivnew/images/#{$file}) no-repeat;
+ 		background-size: 20px 20px;
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 2px 0.5rem 0 0;
+}
+
+
+///
+/// Viewport sized typography with minimum and maximum values
+///
+/// @author Eduardo Boucas (@eduardoboucas)
+///
+/// @param {Number}   $responsive  - Viewport-based size
+/// @param {Number}   $min         - Minimum font size (px)
+/// @param {Number}   $max         - Maximum font size (px)
+///                                  (optional)
+/// @param {Number}   $fallback    - Fallback for viewport-
+///                                  based units (optional)
+///
+/// @example scss - 5vw font size (with 50px fallback), 
+///                 minumum of 35px and maximum of 150px
+///  @include responsive-font(5vw, 35px, 150px, 50px);
+///
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+  
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+  
+  @if $fallback {
+    font-size: $fallback;
+  }
+  
+  font-size: $responsive;
+}
+
+///
+/// Viewport sized LINE-HEIGHT viewportsise (vw) with minimum and maximum values Samma som font-size men för line hight
+///
+/// @author Andreas Josefsson
+///
+/// @param {Number}   $responsive  - Viewport-based size
+/// @param {Number}   $min         - Minimum font size (px)
+/// @param {Number}   $max         - Maximum font size (px)
+///                                  (optional)
+/// @param {Number}   $fallback    - Fallback for viewport-
+///                                  based units (optional)
+///
+/// @example scss - 5vw font size (with 50px fallback), 
+///                 minumum of 35px and maximum of 150px
+///  @include responsive-font(5vw, 35px, 150px, 50px);
+///
+@mixin responsive-lineheight($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    line-height: $min;
+  }
+  
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      line-height: $max;
+    }
+  }
+  
+  @if $fallback {
+    line-height: $fallback;
+  }
+  
+  line-height: $responsive;
+}
